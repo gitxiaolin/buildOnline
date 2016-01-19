@@ -8,9 +8,9 @@
 
 go get github.com/astaxie/beego
 
-go get github.com/gitxiaolin/buildOnline
+go get github.com/gitxiaolin/buildonline
 
-cd github.com/gitxiaolin/buildOnline
+cd github.com/gitxiaolin/buildonline
 
 bee run
 
