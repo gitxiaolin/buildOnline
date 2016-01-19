@@ -8,7 +8,7 @@
 
 go get github.com/astaxie/beego
 
-go get github.com/gitxiaolin/complierOnline
+go get github.com/gitxiaolin/buildOnline
 
 cd github.com/gitxiaolin/buildOnline
 
