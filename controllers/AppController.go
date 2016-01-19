@@ -86,7 +86,7 @@ func (this *AppController) Post() {
 	this.Ctx.WriteString(string(final))
 }
 func code(str string) (string, error) {
-	filename := "D:\\" + hex.EncodeToString(guid.New96().Bytes()) + `.go`
+	filename := "/usr/local/src/nouse/" + hex.EncodeToString(guid.New96().Bytes()) + `.go`
 	f, err := os.OpenFile(filename, os.O_CREATE, 0777)
 	defer f.Close()
 	if err != nil {
