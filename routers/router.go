@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"buildonline/controllers"
+	"github.com/gitxiaolin/buildonline/controllers"
 	"github.com/astaxie/beego"
 )
 
