@@ -10,7 +10,7 @@ go get github.com/astaxie/beego
 
 go get github.com/gitxiaolin/complierOnline
 
-cd github.com/gitxiaolin/complierOnline
+cd github.com/gitxiaolin/buildOnline
 
 bee run
 
