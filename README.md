@@ -15,3 +15,4 @@ cd github.com/gitxiaolin/buildonline
 bee run
 
 打开浏览器，http://localhost:8080/build
+注：linux下可能路径会有些问题，请自行修正
