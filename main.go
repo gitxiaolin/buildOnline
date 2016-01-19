@@ -1,8 +1,8 @@
 package main
 
 import (
-	"buildonline/controllers"
-	_ "buildonline/routers"
+	"github.com/gitxiaolin/buildonline/controllers"
+	_ "github.com/gitxiaolin/buildonline/routers"
 	"github.com/astaxie/beego"
 )
 
