@@ -53,9 +53,17 @@ func (this *AppController) Post() {
 }
 func code(str string) (string, error) {
 	//LINUX
+	// err := os.MkdirAll("/usr/local/src/nouse/")
+	// if err != nil{
+	// 	return "",err
+	// }
 	//filename := "/usr/local/src/nouse/" + hex.EncodeToString(guid.New96().Bytes()) + `.go`
-	//WINDOW
+	//WINDOWS
 	filename := "D:\\nouse\\" + hex.EncodeToString(guid.New96().Bytes()) + `.go`
+	err := os.MkdirAll("D:\\nouse")
+	if err != nil{
+		return "",err
+	}
 	f, err := os.OpenFile(filename, os.O_CREATE|os.O_RDWR, 0777)
 	defer f.Close()
 	if err != nil {
