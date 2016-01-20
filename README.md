@@ -10,9 +10,12 @@ go get github.com/astaxie/beego
 
 go get github.com/gitxiaolin/buildonline
 
-cd github.com/gitxiaolin/buildonline
+//linux:
+cd $GOPATH/src/github.com/gitxiaolin/buildonline
 
-bee run
+//windows 自行寻找目录gopath下src/github.com/gitxiaolin/buildonline
+
+bee run或者go run main.go
 
 打开浏览器，http://localhost:8080/build
 注：linux下可能路径会有些问题，请自行修正
