@@ -19,46 +19,13 @@ import (
 
 var langTypes []string
 
-// func init() {
-// 	// Initialize language type list.
-// 	langTypes = strings.Split(beego.AppConfig.String("lang_types"), "|")
 
-// 	// Load locale files according to language types.
-// 	for _, lang := range langTypes {
-// 		beego.Trace("Loading language: " + lang)
-// 		if err := i18n.SetMessage(lang, "conf/"+"locale_"+lang+".ini"); err != nil {
-// 			beego.Error("Fail to set message file:", err)
-// 			return
-// 		}
-// 	}
-// }
 
 type baseController struct {
 	beego.Controller
 	i18n.Locale
 }
 
-// func (this *baseController) Prepare() {
-// 	// Reset language option.
-// 	this.Lang = "" // This field is from i18n.Locale.
-
-// 	// 1. Get language information from 'Accept-Language'.
-// 	al := this.Ctx.Request.Header.Get("Accept-Language")
-// 	if len(al) > 4 {
-// 		al = al[:5] // Only compare first 5 letters.
-// 		if i18n.IsExist(al) {
-// 			this.Lang = al
-// 		}
-// 	}
-
-// 	// 2. Default language is English.
-// 	if len(this.Lang) == 0 {
-// 		this.Lang = "en-US"
-// 	}
-
-// 	// Set template level language option.
-// 	this.Data["Lang"] = this.Lang
-// }
 
 type AppController struct {
 	baseController
@@ -66,7 +33,6 @@ type AppController struct {
 
 func (this *AppController) Get() {
 	this.TplName = "gobuild.html"
-	fmt.Println("post 22222222222")
 }
 
 func (this *AppController) Post() {
