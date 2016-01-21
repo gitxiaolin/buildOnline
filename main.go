@@ -11,7 +11,25 @@ const (
 )
 
 func main() {
+	err := os.MkdirAll("/usr/local/src/interim", 0777)
+	if err != nil {
+		fmt.Println("make interim document faild")
+		return
+	}
+	c := make(chan os.Signal, 1)
+	signal.Notify(c, os.Interrupt)
+	go func() {
+		for sig := range c {
+			fmt.Printf("received ctrl+c(%v)\n", sig)
+			err := os.RemoveAll("/usr/local/src/interim")
+			if err != nil {
+				fmt.Println(err)
+			}
+			os.Exit(0)
+		}
+	}()
 	beego.Info(beego.BConfig.AppName, APP_VER)
 	beego.Router("/build", &controllers.AppController{})
+	fmt.Println("\n\nplease ues `ctrl + c` to stop serving")
 	beego.Run()
 }
