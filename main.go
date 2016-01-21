@@ -4,6 +4,9 @@ import (
 	"github.com/gitxiaolin/buildonline/controllers"
 	_ "github.com/gitxiaolin/buildonline/routers"
 	"github.com/astaxie/beego"
+	"fmt"
+	"os"
+	"os/signal"
 )
 
 const (
