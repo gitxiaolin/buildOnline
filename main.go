@@ -40,6 +40,6 @@ func main() {
 	}()
 	beego.Info(beego.BConfig.AppName, APP_VER)
 	beego.Router("/build", &controllers.AppController{})
-	fmt.Println("\n\nplease ues `ctrl + c` to stop serving")
+	fmt.Println("\n\n请用 `ctrl + c` 来关闭服务，否则临时文件将不会删除")
 	beego.Run()
 }
