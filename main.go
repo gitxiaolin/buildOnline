@@ -27,7 +27,7 @@ func main() {
 			//Linux
 			//err := os.RemoveAll("/usr/local/src/interim")
 			//Windows
-			err ：= os.RemoveAll("D:\\interim")
+			err := os.RemoveAll("D:\\interim")
 			if err != nil {
 				fmt.Println(err)
 			}
