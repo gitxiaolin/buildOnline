@@ -21,7 +21,10 @@ func main() {
 	go func() {
 		for sig := range c {
 			fmt.Printf("received ctrl+c(%v)\n", sig)
-			err := os.RemoveAll("/usr/local/src/interim")
+			//Linux
+			//err := os.RemoveAll("/usr/local/src/interim")
+			//Windows
+			err ：= os.RemoveAll("D:\\interim")
 			if err != nil {
 				fmt.Println(err)
 			}
