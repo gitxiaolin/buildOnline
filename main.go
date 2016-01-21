@@ -14,7 +14,11 @@ const (
 )
 
 func main() {
-	err := os.MkdirAll("/usr/local/src/interim", 0777)
+	
+	//Linux
+	//err := os.MkdirAll("/usr/local/src/interim", 0777)
+	//Windows
+	err := os.MkdirAll("D:\\interim", 0777)
 	if err != nil {
 		fmt.Println("make interim document faild")
 		return
