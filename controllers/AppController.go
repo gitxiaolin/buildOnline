@@ -53,13 +53,21 @@ func (this *AppController) Post() {
 }
 func code(str string) (string, error) {
 	//LINUX
+	// err := os.MkdirAll("/usr/local/src/interim/",0777)
+	// if err!= nil{
+	// 	return "",err
+	// }
 	//filename := "/usr/local/src/interim/" + hex.EncodeToString(guid.New96().Bytes()) + `.go`
 	//WINDOWS
+	err := os.MkdirAll("D:\\interim",0777)
+	if err!= nil{
+		return "",err
+	}
 	filename := "D:\\interim\\" + hex.EncodeToString(guid.New96().Bytes()) + `.go`
 
 	f, err := os.Create(filename)
 	if err != nil {
-		fmt.Println("mkdir err", err)
+		fmt.Println("create err", err)
 		return "", err
 	}
 	defer f.Close()
